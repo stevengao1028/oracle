@@ -1,7 +1,7 @@
 #coding=utf-8
 import inspect
 import time
-import urllib, urllib2
+import urllib2
 import json
 import socket
 
@@ -66,7 +66,7 @@ if __name__ == "__main__":
         m = mon()
         data = m.runAllGet()
         print data
-        req = urllib2.Request("http://192.168.0.107:8888", json.dumps(data), {'Content-Type': 'application/json'})
+        req = urllib2.Request("http://192.168.50.81:8888", json.dumps(data), {'Content-Type': 'application/json'})
         f = urllib2.urlopen(req)
         response = f.read()
         print response
